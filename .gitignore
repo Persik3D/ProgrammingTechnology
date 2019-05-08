@@ -5,6 +5,7 @@ Debug/
 *.rc
 *.filters
 *.user
+.vscode/
 
 # Prerequisites
 *.d
