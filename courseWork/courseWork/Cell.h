@@ -31,10 +31,6 @@ public:
 	Cell operator = (const Cell &c);
 	Cell operator = (int c);
 
-	/*operator bool();
-	operator int();
-	operator string();*/
-
 	friend ostream& operator << (ostream &s, Cell &c);
 
 	bool isEmpty();

@@ -14,6 +14,7 @@ int errors = 0;
 
 string intToABC(int i, string cash = "") {
 	int rem = i % 26;
+	if (rem == 0) rem = 26;
 	int whole = (i - rem) / 26;
 	cash.push_back(rem + 64);
 	return whole > 0 ? intToABC(whole, cash) : cash;
@@ -96,17 +97,14 @@ void test(string address, string command, int trueResult) {
 
 int main()
 {
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 100; i++) { //инициализация таблицы
 		Table.push_back(vector<Cell>());	
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 100; j++) {
 			Table[i].push_back(Cell(IntToABC(i) + to_string(j + 1)));
 		}
 	}
 
-	printValue();
-	printFormule();
-
-	test("A1", "=15+30", 45);
+	test("A1", "=15+30", 45); //Unit тесты
 	test("A1", "=5*10", 50);
 	test("A1", "=5*10+30", 80);
 	test("A1", "=15+5*10", 65);

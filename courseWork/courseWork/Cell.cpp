@@ -136,39 +136,6 @@ Cell Cell::operator=(int c)
 	return *this;
 }
 
-//Cell::operator bool()
-//{
-//	return v1 != NULL && v2 != NULL;
-//}
-//
-//Cell::operator int()
-//{
-//	switch (act)
-//	{
-//	case '=':
-//		return v0;
-//	case '#':
-//		return v1->toInt();
-//	case '+':
-//		return (int)v1 + (int)v2;
-//	case '-':
-//		return (int)v1 - (int)v2;
-//	case '*':
-//		return (int)v1 * (int)v2;
-//	case '/':
-//		return (int)v1 / (int)v2;
-//	}
-//}
-//
-//Cell::operator string()
-//{
-//	if (act == '=') return to_string(v0);
-//	if (act == '#') return v1->toString();
-//	return (v1->name == "" ? v1->toString() : v1->name)
-//		+ act
-//		+ (v2->name == "" ? v2->toString() : v2->name);
-//}
-
 ostream & operator<<(ostream & s, Cell & c)
 {
 	s << c.toInt();

@@ -55,24 +55,6 @@ void show_list(list<int>&a)
 
 int main()
 {
-	/*list<int> v;
-	for (int i = 0; i < 10; i++)
-	{
-		v.push_back(i);
-	}
-	cout << "size before: " << v.size() <<endl;
-	show_list(v);
-	auto it = remove(begin(v), end(v), 5);
-	cout << endl << "size after: " << v.size() << endl;
-	show_list(v);
-
-	v.erase(it);
-	cout << endl << "size erase after: " << v.size() << endl;
-	show_list(v);
-
-	getchar();
-	return 0;*/
-
 	check_vector(1000);
 	check_vector(10000);
 	check_vector(100000);
